@@ -53,9 +53,9 @@ industry.
 I have a strong desire to obtain a cloud certification specifically in Amazon Web Services (AWS) ☁️.
 
 ## 📊 Statistics:
-  
+<!---
 | ![Maciej's Streak](https://github-readme-streak-stats.herokuapp.com/?user=maciej-jasiewicz&theme=omni&hide_border=true) |
 | :-------------: |
-
+--->
 | ![Wakatime Stats](https://github-readme-stats.undefined.blue/api/wakatime?username=@maciej_jasiewicz&langs_count=8&layout=compact&cache_seconds=86400&theme=omni&hide_border=true) | ![Maciej's Stats](https://github-readme-stats.undefined.blue/api?username=maciej-jasiewicz&theme=omni&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&cache_seconds=86400) |
 | ------------- | ------------- |

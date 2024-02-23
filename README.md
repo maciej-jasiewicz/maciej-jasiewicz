@@ -2,23 +2,14 @@
 
 ## 🙋‍♂️ About Me
 
-Computer science has always been my greatest source of
-satisfaction. Since elementary school, I embarked on an adventure
-by learning my first programming language. As a self-taught
-enthusiast, I have dedicated countless hours to exploring various
-technologies.
-I am currently working on enhancing my programming skills in the
-JavaScript and AWS technology stack. With my technical expertise,
-I believe I can make significant contributions to the success of
-technology teams.
-- Over 1 year of professional experience in the IT industry
-- Over 4 years of hobbyist experience in the IT industry
-- Over 2 years of hobbyist programming experience with the PHP
-technology stack, including one year professionally
-- Over 1.5 years of experience with the JavaScript technology stack
+Computer science has always provided me with the most satisfaction. Since elementary school, I've been on an adventure of learning my first programming language. As a self-taught enthusiast, I have spent countless hours researching different technologies. I am currently improving my programming skills in JavaScript and the AWS technology stack. With my technical expertise, I believe I can contribute significantly to the success of technology teams.
 
-I have experience working with high-traffic websites in the event
-industry.
+- More than one year of professional experience in the IT industry.
+- More than four years of hobbyist experience in the IT industry
+- Over two years of hobbyist programming experience with the PHP technology stack, including one year professionally.
+- Over 1.5 years of experience using the JavaScript technology stack.
+
+I have experience working with high-traffic websites.
 
 
 ## 👨‍💻 Tech Stack
@@ -49,8 +40,11 @@ industry.
 ![DataGrip](https://img.shields.io/badge/-DataGrip-000000?style=flat&logo=datagrip&logoColor=white)
 ![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white)
 
+## 💡 Currently learning
+- Cloudflare ☁️ (Workers/Pages/R2/D1/KV/Zero Trust).
+
 ## 🎯 Future Goals
-I have a strong desire to obtain a cloud certification specifically in Amazon Web Services (AWS) ☁️.
+I have a great desire to earn a cloud certification, mainly in Amazon Web Services ☁️.
 
 ## 📊 Statistics:
 <!---

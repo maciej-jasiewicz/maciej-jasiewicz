@@ -12,6 +12,11 @@ Computer science has always provided me with the most satisfaction. Since elemen
 I have experience working with high-traffic websites.
 
 
+## 🌱 Contributed to
+- [nestjs/throttler](https://github.com/nestjs/throttler) - Oct 10, 2023
+- [codeigniter4/translations](https://github.com/codeigniter4/translations) - Oct 12, 2018
+
+
 ## 👨‍💻 Tech Stack
 
 - **Languages**:

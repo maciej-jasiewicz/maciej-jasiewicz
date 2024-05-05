@@ -46,7 +46,7 @@ I have experience working with high-traffic websites.
 ![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white)
 
 ## 💡 Currently learning
-- Cloudflare ☁️ (Workers/Pages/R2/D1/KV/Zero Trust).
+-  ![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white) ![Cloudflare](https://img.shields.io/badge/-Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white) ![Cloudflare Pages](https://img.shields.io/badge/-Cloudflare%20Pages-F38020?style=flat&logo=cloudflarepages&logoColor=white) ![Cloudflare Workers](https://img.shields.io/badge/-Cloudflare%20Workers-F38020?style=flat&logo=cloudflareworkers&logoColor=white)
 
 ## 🎯 Future Goals
 I have a great desire to earn a cloud certification, mainly in Amazon Web Services ☁️.

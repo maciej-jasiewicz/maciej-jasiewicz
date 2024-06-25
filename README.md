@@ -1,17 +1,5 @@
 <img src="header.svg" style="width: 100%;">
 
-## 🙋‍♂️ About Me
-
-Computer science has always provided me with the most satisfaction. Since elementary school, I've been on an adventure of learning my first programming language. As a self-taught enthusiast, I have spent countless hours researching different technologies. I am currently improving my programming skills in JavaScript and the AWS technology stack. With my technical expertise, I believe I can contribute significantly to the success of technology teams.
-
-- More than one year of professional experience in the IT industry.
-- More than four years of hobbyist experience in the IT industry
-- Over two years of hobbyist programming experience with the PHP technology stack, including one year professionally.
-- Over 1.5 years of experience using the JavaScript technology stack.
-
-I have experience working with high-traffic websites.
-
-
 ## 🌱 Contributed to
 - [nestjs/throttler](https://github.com/nestjs/throttler) - Oct 10, 2023
 - [codeigniter4/translations](https://github.com/codeigniter4/translations) - Oct 12, 2018

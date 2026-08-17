@@ -7,11 +7,11 @@ PHP / Laravel · Application Security · Infrastructure · TypeScript / React
 
 I build and maintain production web systems where backend quality, security, infrastructure and maintainability matter more than framework novelty.
 
-My primary backend stack is **PHP / Laravel** (commercially since 2022). I also work hands-on with **TypeScript / React, Linux, Docker / Kubernetes, CI/CD and network infrastructure**.
+**PHP / Laravel** is my primary backend stack, with commercial PHP experience since 2021 and Laravel used commercially since June 2022. I also work hands-on with **TypeScript / React, Linux, Docker / Kubernetes, CI/CD and network infrastructure**.
 
 ## Core stack
 
-**Backend:** PHP 8.x · Laravel 7–9 / 11–12 · REST APIs · Eloquent · Queues / Jobs / Events · Redis
+**Backend:** PHP 8.x · Laravel 7–9 / 11–12 · REST APIs · Eloquent · Queues / Jobs / Events
 
 **Authentication & security:** Laravel Policies · Sanctum · session-based authentication · access / refresh tokens · TOTP MFA · Authentik · IAM · Cloudflare WAF / Zero Trust
 
@@ -19,7 +19,7 @@ My primary backend stack is **PHP / Laravel** (commercially since 2022). I also 
 
 **Frontend:** TypeScript · JavaScript · React · Next.js · Vite
 
-**Infrastructure:** Linux · Docker · Kubernetes / K3s · Helm · Ingress · GitHub Actions · GitLab CI
+**Infrastructure:** Linux · Docker · Kubernetes / K3s · Helm · Ingress · GitHub Actions · GitLab CI · Terraform
 
 **Networking:** WireGuard · MikroTik RouterOS · IPv4 / IPv6 · BGP / DN42
 
@@ -34,7 +34,7 @@ My primary backend stack is **PHP / Laravel** (commercially since 2022). I also 
 
 ### Device provisioning & administration platform
 
-Built a Laravel-based administration and provisioning system with **Laravel Policies, TOTP MFA and recovery codes**. Integrated **Authentik**, generated **WireGuard** configuration for provisioned devices, exposed an API consumed by Bash-based setup automation, and coordinated technical requirements with the device manufacturer.
+Built a **Laravel 11 / PostgreSQL** administration and device-provisioning platform used to provision **thousands of hardware devices**. Implemented device registration by individual serial number and configurable serial-number ranges, Laravel Policies, TOTP MFA with recovery codes, Redis-backed queues, Authentik integration and automated WireGuard configuration generation. Exposed a REST API consumed by Bash-based device setup automation and deployed the application using Docker Compose.
 
 ### Internal mobile workforce application
 
@@ -46,15 +46,17 @@ Investigated and remediated a complex **DDoS** incident involving an exposed ori
 
 ### Independent network engineering
 
-Operate **DN42 AS4242422169** with an assigned IPv6 `/48`, **BGP peering over WireGuard** and MikroTik RouterOS routing / firewall configuration.
+Operate **DN42 AS4242422169** with the assigned `fd14:e78e:db29::/48` IPv6 prefix and **three BGP peers over WireGuard** on MikroTik RouterOS. The outbound routing policy advertises only the exact assigned prefix, while inbound filtering rejects bogon prefixes.
 
 ## Systems & infrastructure practice
 
-Beyond application development, I work with production Linux environments, Dockerized delivery, CI/CD pipelines and K3s-based infrastructure. My self-directed systems work also includes Cilium, cert-manager, Terraform, Ansible, Prometheus / Grafana and building a minimal bootable Linux environment from the Linux kernel and BusyBox.
+Beyond application development, I work with production Linux environments, Dockerized delivery, CI/CD pipelines and K3s-based infrastructure.
 
-## Open-source
+I maintain an independent three-node K3s environment on Ubuntu Server 24.04, provisioned with Terraform, and use separate experiments to explore technologies and operational patterns including **Cilium, cert-manager, Hetzner CSI, Argo CD and Flux**. My systems-learning work also includes building a minimal bootable Linux environment from the Linux kernel and BusyBox.
 
-I occasionally contribute fixes, translations and documentation improvements to open-source projects. My public GitHub is still intentionally small because most of my commercial work lives in private repositories.
+## Open source
+
+I occasionally contribute fixes, translations and documentation improvements to open-source projects. Most of my commercial work remains private, so my public repositories focus on reproducible engineering examples, infrastructure documentation and selected independent projects.
 
 ---
 

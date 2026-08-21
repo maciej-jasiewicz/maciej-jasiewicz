@@ -1,63 +1,71 @@
 # Maciej Jasiewicz
 
 **Software Engineer / Web Systems Architect**  
-PHP / Laravel · Application Security · Infrastructure · TypeScript / React
+PHP / Laravel · Application Security · Infrastructure
 
-*Responsible technology that doesn't distract you from your business.*
+I build Laravel backend systems and work across deployment, security and infrastructure when needed.
 
-I build and maintain production web systems where backend quality, security, infrastructure and maintainability matter more than framework novelty.
+I have worked commercially with PHP since around 2021 and with Laravel since June 2022. I am currently Tech Lead & Web Systems Architect at ONEXO.pl, where I work on requirements, architecture, implementation, deployment, security and maintenance of client systems.
 
-**PHP / Laravel** is my primary backend stack, with commercial PHP experience since 2021 and Laravel used commercially since June 2022. I also work hands-on with **TypeScript / React, Linux, Docker / Kubernetes, CI/CD and network infrastructure**.
+## Technologies
 
-## Core stack
+- **Backend:** PHP 8.x, Laravel 7–9 and 11–12, REST APIs, Eloquent, queues, jobs and events
+- **Authentication and security:** Laravel Policies, Sanctum, sessions and cookies, access and refresh tokens, TOTP MFA, Authentik, rate limiting, Cloudflare WAF and Zero Trust
+- **Data:** PostgreSQL, MySQL, MariaDB and Redis
+- **Frontend:** TypeScript, JavaScript, React, Next.js, Vite and Sass
+- **Infrastructure and delivery:** Linux, Docker, Kubernetes and K3s, Helm, Ingress, GitHub Actions, GitLab CI, AWS and Cloudflare
+- **Networking:** WireGuard, IPv4 and IPv6; BGP, MikroTik RouterOS and DN42 in an independent project
+- **Lab experience:** Terraform in a personal K3s environment
 
-**Backend:** PHP 8.x · Laravel 7–9 / 11–12 · REST APIs · Eloquent · Queues / Jobs / Events
+## Working practices
 
-**Authentication & security:** Laravel Policies · Sanctum · session-based authentication · access / refresh tokens · TOTP MFA · Authentik · IAM · Cloudflare WAF / Zero Trust
+- **Incident diagnosis:** I check logs, request paths and infrastructure state before changing a production system. During a DDoS incident, this identified direct access to the origin as the main problem.
+- **Deployment should be boring.** I keep build and deployment steps in version-controlled pipeline configuration instead of relying on commands run manually on a production server.
+- **Documentation and handover:** I document architecture, dependencies, deployment and operational steps so another engineer can continue the work.
+- **Scope control:** On zeskanuj.com, I used Filament for the administration layer instead of building a separate internal frontend.
 
-**Data:** PostgreSQL · MySQL / MariaDB · Redis
+## Selected commercial work
 
-**Frontend:** TypeScript · JavaScript · React · Next.js · Vite
+### Device provisioning platform
 
-**Infrastructure:** Linux · Docker · Kubernetes / K3s · Helm · Ingress · GitHub Actions · GitLab CI · Terraform
+I built a Laravel 11 and PostgreSQL platform used to register and provision thousands of hardware devices.
 
-**Networking:** WireGuard · MikroTik RouterOS · IPv4 / IPv6 · BGP / DN42
+The system supports individual serial numbers and configurable serial-number ranges. It uses Redis-backed queues, Laravel Policies and TOTP MFA with recovery codes. It integrates Authentik, Nginx Proxy Manager, wg-portal and WireGuard configuration generation.
 
-## Engineering principles
-
-- **Diagnose before changing.** I investigate architecture, infrastructure and bottlenecks before deciding what should be refactored, replaced or left alone.
-- **Deployment should be boring.** Configuration, automation and deployment are part of the system, not undocumented operational knowledge.
-- **Design for the next engineer.** Readable code, documentation and explicit decisions matter because a system should not depend on its original author.
-- **Use complexity only when it pays for itself.** I prefer the simplest architecture that satisfies the actual reliability, security and business constraints.
-
-## Selected engineering work
-
-### Device provisioning & administration platform
-
-Built a **Laravel 11 / PostgreSQL** administration and device-provisioning platform used to provision **thousands of hardware devices**. Implemented device registration by individual serial number and configurable serial-number ranges, Laravel Policies, TOTP MFA with recovery codes, Redis-backed queues, Authentik integration and automated WireGuard configuration generation. Exposed a REST API consumed by Bash-based device setup automation and deployed the application using Docker Compose.
+A REST API exposes the provisioning workflow to Bash-based device setup automation. The application is delivered with Docker Compose.
 
 ### Internal mobile workforce application
 
-Implemented token-based authentication for an **Ionic / Capacitor** application used by warehouse and machine-operator staff. The mobile authentication flow used **access and refresh tokens**, while most browser-based systems I build use session-based authentication.
+For a confidential internal Ionic and Capacitor application, I implemented access and refresh token authentication. The application is used by warehouse and machine-operator staff.
 
-### Production security incident response
+For first-party browser applications, I normally use session and cookie authentication when it matches the product and threat model.
 
-Investigated and remediated a complex **DDoS** incident involving an exposed origin server. Combined origin isolation, **Cloudflare WAF / rate limiting** and application-level caching to restore stable access for legitimate users.
+### Production DDoS incident
 
-### Independent network engineering
+A production service was behind Cloudflare, but its origin IP was publicly discoverable and the server accepted direct connections. Attack traffic could therefore bypass Cloudflare.
 
-Operate **DN42 AS4242422169** with the assigned `fd14:e78e:db29::/48` IPv6 prefix and **three BGP peers over WireGuard** on MikroTik RouterOS. The outbound routing policy advertises only the exact assigned prefix, while inbound filtering rejects bogon prefixes.
+I analysed Cloudflare requests, server logs and traffic patterns, rotated and isolated the origin IP, restricted direct access, and adjusted WAF and rate-limiting rules. I also added application-level caching where it reduced unnecessary database and rendering work.
 
-## Systems & infrastructure practice
+These changes restored the intended Cloudflare-to-origin path and stable access for legitimate users.
 
-Beyond application development, I work with production Linux environments, Dockerized delivery, CI/CD pipelines and K3s-based infrastructure.
+## Independent, non-commercial projects
 
-I maintain an independent three-node K3s environment on Ubuntu Server 24.04, provisioned with Terraform, and use separate experiments to explore technologies and operational patterns including **Cilium, cert-manager, Hetzner CSI, Argo CD and Flux**. My systems-learning work also includes building a minimal bootable Linux environment from the Linux kernel and BusyBox.
+### DN42 autonomous system
 
-## Open source
+I operate DN42 AS4242422169 with the assigned IPv6 prefix `fd14:e78e:db29::/48`.
 
-I occasionally contribute fixes, translations and documentation improvements to open-source projects. Most of my commercial work remains private, so my public repositories focus on reproducible engineering examples, infrastructure documentation and selected independent projects.
+The network currently has three BGP peers over WireGuard. MikroTik RouterOS handles the BGP sessions and routing policy. The export policy advertises only the exact assigned prefix, while the import policy rejects bogon prefixes.
 
----
+### K3s infrastructure lab
 
-**Current focus:** secure Laravel backend development · application security · enterprise identity · automated testing · platform engineering
+I maintain a personal three-node K3s environment on Ubuntu Server 24.04 VPSs, with one control-plane node and two workers.
+
+Terraform provisions the core infrastructure. K3s, Helm, Ingress and local storage form the maintained baseline. Cilium, cert-manager, Hetzner CSI, Argo CD, Flux and Ansible were tested separately and are not presented as permanent components of the environment.
+
+### Minimal Linux environment
+
+I built a bootable command-line environment from the Linux kernel and BusyBox as a systems-learning project.
+
+## Public repositories
+
+Most of my commercial work is private. My public repositories focus on independent infrastructure work, technical documentation and reproducible engineering examples.
